@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        document.write('<svg width=400 height=400>');
+        document.write('<line x1=0 y1=0 x2=400 y2=0 stroke="black" transform="translate(0,400)scale(1,-1)"/><line x1=0 y1=0 x2=0 y2=400 stroke="black" transform="translate(0,400)scale(1,-1)"/>');
+        let x1 = -5,y1,x2,y2;
+        let a = 1, b=1;
+        for(let i=0; i<100; i++) {
+        y1=a*x1*x1*x1-3*x1*x1+4*x1+b;
+        x2=x1+0.1;
+        y2=a*x2*x2*x2-3*x2*x2+4*x2+b;
+        document.write('<g transform="translate(0,400)scale(40,-40)"><line x1='+x1+' y1='+y1+' x2='+x2+' y2='+y2+' stroke="blue" stroke-width="0.05"/></g>');
+        x1 = x2;
+        };
+        dovument.write('</svg>');
+        
+        </script>
+
+</body>
+</html>
